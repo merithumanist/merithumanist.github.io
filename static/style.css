@@ -31,7 +31,7 @@ main, header.site, footer.site {
 header.site {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--rule);
@@ -130,3 +130,33 @@ footer.site {
 }
 .social { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
 .fine { color: var(--muted); font-size: 0.75rem; }
+
+/* brand images */
+header.site .brand { display: inline-flex; align-items: center; gap: 0.55rem; }
+header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
+
+.hero.has-bg {
+  margin: 1.25rem 0 0;
+  padding: 3rem 1rem 3.5rem;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero.has-bg::before {           /* keeps text readable over bright stars */
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(rgba(14,15,19,.25), rgba(14,15,19,.6));
+}
+.hero.has-bg > * { position: relative; }
+.hero.has-bg .tagline { color: var(--text); }
+.hero .avatar {
+  width: 6.5rem; height: 6.5rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 0 0 3px rgba(242,232,213,.25);
+}
+
+.phase-sub { margin: -0.25rem 0 0.5rem; color: var(--muted); font-style: italic; font-size: 0.95rem; }

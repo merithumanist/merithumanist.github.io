@@ -1,7 +1,21 @@
 title: The Meritocratic Humanist
-tagline: "Humanism. Merit. Consequence. A continuing log on earned excellence."
+# Each line of the tagline shows on its own line in the header.
+tagline:
+  - "Humanism. Merit. Consequence."
+  - "A continuing log on earned excellence."
 base_url: https://merithumanist.github.io
 hashtag: "#TheMeritocraticHumanist"
+
+# Put these files in static/. Leave the name blank to go without.
+icon: icon.png            # the sextant: header, homepage, browser tab
+background: background.jpg # the starscape: homepage header
+
+# Archive headings. Subtitles are optional; leave "" for none.
+phases:
+  Phase 1: ""
+  Phase II: ""
+  Phase 3: ""
+
 links:
   - name: X
     url: https://x.com/MeritHumanist

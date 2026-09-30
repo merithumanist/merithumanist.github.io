@@ -27,6 +27,8 @@ NOW = datetime.now(timezone.utc)
 PREVIEW = "--preview" in sys.argv
 
 SITE = yaml.safe_load((ROOT / "site.yml").read_text(encoding="utf-8"))
+TAGLINE_LINES = SITE["tagline"] if isinstance(SITE["tagline"], list) else [SITE["tagline"]]
+TAGLINE = " ".join(TAGLINE_LINES)
 BASE = Template((ROOT / "templates/base.html").read_text(encoding="utf-8"))
 URL_RE = re.compile(r"(https?://[^\s<]+)")
 TAG_RE = re.compile(r"(?<![\w&])(#\w+)")
@@ -117,7 +119,9 @@ def page(path, title, content, description="", image="", canonical=""):
     doc = BASE.substitute(
         site=e(SITE["title"]),
         title=e(title),
-        description=e(description or SITE["tagline"]),
+        description=e(description or TAGLINE),
+        icon_link=ICON_LINK,
+        brand_icon=BRAND_ICON,
         canonical=e(SITE["base_url"] + canonical),
         og_image=og_img,
         links=links_html(),
@@ -135,6 +139,29 @@ def links_html():
 
 # ---------- images ----------
 
+def clean_copy(src, dest, max_px=MAX_IMG):
+    """Re-save an image with metadata stripped and size capped."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with Image.open(src) as im:
+        im.thumbnail((max_px, max_px))
+        fmt = (im.format or src.suffix.lstrip(".")).upper().replace("JPG", "JPEG")
+        clean = im.copy()
+        clean.info = {}  # drops EXIF/GPS/XMP; Pillow only writes metadata it's handed
+        if fmt == "JPEG" and clean.mode not in ("RGB", "L"):
+            clean = clean.convert("RGB")
+        clean.save(dest, format=fmt, quality=85)
+
+
+def static_asset(key, max_px):
+    """Clean a brand image from static/ into the site. Returns its URL or ''."""
+    name = SITE.get(key)
+    src = ROOT / "static" / name if name else None
+    if not src or not src.exists():
+        return ""
+    clean_copy(src, OUT / "static" / name, max_px)
+    return f"/static/{name}"
+
+
 def publish_image(log):
     """Copy the Log image with metadata stripped and size capped. Returns its public URL."""
     name = log.get("image")
@@ -144,16 +171,7 @@ def publish_image(log):
     if not src.exists():
         print(f"  ! {log['id']}: image {name} not found", file=sys.stderr)
         return ""
-    dest = OUT / "logs" / log["id"] / src.name
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    with Image.open(src) as im:
-        im.thumbnail((MAX_IMG, MAX_IMG))
-        fmt = (im.format or src.suffix.lstrip(".")).upper().replace("JPG", "JPEG")
-        clean = im.copy()
-        clean.info = {}  # drops EXIF/GPS/XMP; Pillow only writes metadata it's handed
-        if fmt == "JPEG" and clean.mode not in ("RGB", "L"):
-            clean = clean.convert("RGB")
-        clean.save(dest, format=fmt, quality=85)
+    clean_copy(src, OUT / "logs" / log["id"] / src.name)
     return f"/logs/{log['id']}/{src.name}"
 
 
@@ -199,19 +217,26 @@ def archive_page(logs):
             if phase is not None:
                 parts.append("</ol>")
             phase = log.get("phase")
-            parts.append(f'<h2 class="phase">{e(phase)}</h2><ol class="archive">')
+            sub = (SITE.get("phases") or {}).get(phase) or ""
+            parts.append(f'<h2 class="phase">{e(phase)}</h2>'
+                         + (f'<p class="phase-sub">{e(sub)}</p>' if sub else "")
+                         + '<ol class="archive">')
         cls = ' class="special"' if log.get("type") == "special" else ""
         parts.append(f'<li{cls}><a href="{url(log)}">{e(label(log))}</a></li>')
     parts.append("</ol>")
     page("logs/index.html", "The Logs", "\n".join(parts),
-         description=f"Every Log, in order. {SITE['tagline']}", canonical="/logs/")
+         description=f"Every Log, in order. {TAGLINE}", canonical="/logs/")
 
 
 def home_page(logs):
     latest = logs[-1]
     door = next((l for l in logs if l["id"] == "SL001"), None)
     img = f"/logs/{latest['id']}/{latest['image']}" if latest.get("image") else ""
-    parts = [f'<header class="hero"><h1>{e(SITE["title"])}</h1><p class="tagline">{e(SITE["tagline"])}</p></header>',
+    bg = f' style="background-image: url({BACKGROUND})"' if BACKGROUND else ""
+    avatar = f'<img class="avatar" src="{ICON}" alt="">' if ICON else ""
+    tagline = "<br>".join(e(l) for l in TAGLINE_LINES)
+    parts = [f'<header class="hero{" has-bg" if BACKGROUND else ""}"{bg}>{avatar}'
+             f'<h1>{e(SITE["title"])}</h1><p class="tagline">{tagline}</p></header>',
              '<section class="latest"><p class="kicker">Latest</p>',
              f'<h2><a href="{url(latest)}">{e(label(latest))}</a></h2>']
     parts.append(f'<div class="log-text">{text_to_html(latest["body"])}</div>')
@@ -226,12 +251,20 @@ def home_page(logs):
 
 # ---------- main ----------
 
+ICON = BACKGROUND = ICON_LINK = BRAND_ICON = ""
+
+
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(ROOT / "static", OUT / "static")
     (OUT / ".nojekyll").write_text("")
+    global ICON, BACKGROUND, ICON_LINK, BRAND_ICON
+    ICON = static_asset("icon", 512)
+    BACKGROUND = static_asset("background", 1600)
+    ICON_LINK = f'<link rel="icon" href="{ICON}">' if ICON else ""
+    BRAND_ICON = f'<img src="{ICON}" alt="">' if ICON else ""
     logs = load_logs()
     for i, log in enumerate(logs):
         log_page(log, logs[i - 1] if i else None, logs[i + 1] if i + 1 < len(logs) else None)
