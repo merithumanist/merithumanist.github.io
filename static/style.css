@@ -56,9 +56,9 @@ h2 { font-size: 1.35rem; }
 .gallery { display: flex; gap: 0.5rem; margin: 1rem 0 1.5rem; }
 .gallery .gitem { position: relative; min-width: 0; }
 .gallery .gitem > a { display: block; }
-.gallery img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.gallery img, .gallery video { display: block; width: 100%; height: auto; border-radius: 6px; }
 .gallery.single { justify-content: center; }
-.gallery.single img { width: auto; max-width: 100%; max-height: 22rem; }
+.gallery.single img, .gallery.single video { width: auto; max-width: 100%; max-height: 22rem; }
 
 /* Phone: several images become a swipe row; the next one peeks in so it's obvious there's more */
 @media (max-width: 600px) {
