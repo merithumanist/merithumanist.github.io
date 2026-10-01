@@ -59,6 +59,21 @@ h2 { font-size: 1.35rem; }
 .gallery.single { justify-content: center; }
 .gallery.single img { width: auto; max-width: 100%; max-height: 22rem; }
 
+/* Phone: several images become a swipe row; the next one peeks in so it's obvious there's more */
+@media (max-width: 600px) {
+  .gallery:not(.single) {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-left: -1rem; margin-right: -1rem;
+    padding: 0 1rem;
+    scrollbar-width: none;
+  }
+  .gallery:not(.single)::-webkit-scrollbar { display: none; }
+  .gallery:not(.single) a { flex: 0 0 85% !important; scroll-snap-align: center; }
+  .gallery:not(.single) { align-items: center; }
+  .gallery.single img { max-height: 18rem; }
+}
+
 .log-text p { margin: 0 0 1rem; }
 .tag { color: var(--muted); }
 .date, .credit { color: var(--muted); font-size: 0.85rem; margin: 0.25rem 0; }
