@@ -52,13 +52,12 @@ h2 { font-size: 1.35rem; }
 }
 .kicker + h1, .kicker + h2 { margin-top: 0.4rem; }
 
-.log-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin: 1rem 0 1.5rem;
-}
+/* Log images: one = centred and capped; several = one row, equal heights, uncropped */
+.gallery { display: flex; gap: 0.5rem; margin: 1rem 0 1.5rem; }
+.gallery a { display: block; min-width: 0; }
+.gallery img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.gallery.single { justify-content: center; }
+.gallery.single img { width: auto; max-width: 100%; max-height: 22rem; }
 
 .log-text p { margin: 0 0 1rem; }
 .tag { color: var(--muted); }
