@@ -195,3 +195,10 @@ header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
 .series .part .kicker { margin-top: 0; }
 .series .part h2 { margin: 0.3rem 0 0.75rem; }
 .series .part h2 a { text-decoration: none; }
+
+/* Header nav, tags, buttons */
+header.site .nav { display: flex; gap: 1rem; }
+header.site .nav a { color: var(--muted); }
+.tags { color: var(--muted); font-size: 0.85rem; margin: 0.25rem 0; }
+.tags span { letter-spacing: 0.04em; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
