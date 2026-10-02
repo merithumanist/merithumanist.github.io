@@ -184,7 +184,7 @@ header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
 
 /* The Door: small thumbnail beside the text */
 .door::after { content: ""; display: block; clear: both; }
-.door .thumb { float: right; margin: 0 0 0.5rem 1rem; }
+.door .thumb { float: right; margin: 0.6rem 0 0.5rem 1rem; }
 .door .thumb img { display: block; width: 7rem; height: auto; border-radius: 6px; }
 .door .kicker a { color: inherit; text-decoration: none; }
 
