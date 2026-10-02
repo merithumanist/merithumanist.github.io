@@ -226,6 +226,6 @@ header.site .nav a { color: var(--muted); }
 .series .part-head { margin: 2.75rem 0 0; color: var(--cream); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .series .part-head + .part { margin-top: 0.75rem; }
 
-/* All Logs: a Special Log set apart in sequence */
-ol.archive.special-block { margin: 0.5rem 0; border-top: 1px solid var(--cream); border-bottom: 1px solid var(--cream); }
-ol.archive.special-block li { border-bottom: 0; }
+/* All Logs: a Special Log sits in sequence, with the same gap as between blocks */
+ol.archive.special-block { margin-top: 2.25rem; }
+ol.archive.special-block + ol.archive { margin-top: 2.25rem; }
