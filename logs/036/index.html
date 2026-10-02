@@ -14,6 +14,9 @@
   <meta property="og:image" content="https://merithumanist.github.io/logs/036/card.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/static/icon.png">
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <meta name="theme-color" content="#0e0f13">
+  <link rel="apple-touch-icon" href="/static/app-192.png">
   <link rel="alternate" type="application/rss+xml" title="The Meritocratic Humanist" href="/feed.xml">
   <link rel="stylesheet" href="/static/style.css?v=16e491fd">
 </head>
@@ -45,5 +48,6 @@
   <script>/* ?ref=… tells GoatCounter where a visit came from, then is removed so the address bar stays clean */
   (function(){var u=new URL(location.href),r=u.searchParams.get("ref");if(!r)return;window.goatcounter={referrer:r};u.searchParams.delete("ref");history.replaceState(null,"",u.pathname+(u.search||"")+u.hash)})();</script>
   <script data-goatcounter="https://merithumanist.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>
