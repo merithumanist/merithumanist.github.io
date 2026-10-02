@@ -183,9 +183,17 @@ header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
 .video.short { aspect-ratio: 9 / 16; max-width: 18rem; margin-left: auto; margin-right: auto; }
 
 /* The Door: small thumbnail beside the text */
-.door::after { content: ""; display: block; clear: both; }
-.door .thumb { float: right; margin: 0.6rem 0 0.5rem 1rem; }
-.door .thumb img { display: block; width: 7rem; height: auto; border-radius: 6px; }
+/* Text and picture never wrap around each other: stacked on phones, two columns on wider screens */
+.door-body { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.75rem; }
+.door .thumb { align-self: center; }
+.door .thumb img { display: block; width: 10rem; max-width: 100%; height: auto; border-radius: 6px; }
+.door-text { min-width: 0; }
+.door-text p:last-child { margin-bottom: 0; }
+@media (min-width: 601px) {
+  .door-body { flex-direction: row-reverse; align-items: flex-start; gap: 1.5rem; }
+  .door .thumb { align-self: flex-start; flex: none; }
+  .door .thumb img { width: 9rem; }
+}
 .door .kicker a { color: inherit; text-decoration: none; }
 
 /* Series */
