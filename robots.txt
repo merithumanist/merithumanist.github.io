@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://merithumanist.github.io/sitemap.xml
