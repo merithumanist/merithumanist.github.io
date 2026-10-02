@@ -229,3 +229,9 @@ header.site .nav a { color: var(--muted); }
 /* All Logs: a Special Log sits in sequence, with the same gap as between blocks */
 ol.archive.special-block { margin-top: 2.25rem; }
 ol.archive.special-block + ol.archive { margin-top: 2.25rem; }
+
+/* Comfortable tap targets on phones (at least 24px tall, spaced apart) */
+header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
+.alt summary { min-height: 1.75rem; min-width: 2.5rem; padding: 0.45rem 0.55rem; text-align: center; }
+.tags a { display: inline-block; padding: 0.25rem 0; }
+.door .kicker a, .kicker a { display: inline-block; padding: 0.2rem 0; }
