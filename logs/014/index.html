@@ -49,9 +49,17 @@ The other allows certainty to outrun the Law.</p>
     <p class="fine">Writing © The Meritocratic Humanist, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Share it, quote it, use it; just credit The Meritocratic Humanist and link back.</p>
     <p class="fine">Log images belong to their respective owners and are used for commentary.</p>
   </footer>
-  <script>/* ?ref=… tells GoatCounter where a visit came from, then is removed so the address bar stays clean */
-  (function(){var u=new URL(location.href),r=u.searchParams.get("ref");if(!r)return;window.goatcounter={referrer:r};u.searchParams.delete("ref");history.replaceState(null,"",u.pathname+(u.search||"")+u.hash)})();</script>
-  <script data-goatcounter="https://merithumanist.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script>/* Visits tagged ?ref= (platform) or ?utm_campaign= (campaign) are counted with their tags,
+     then the tags are removed so the address bar stays clean */
+  (function(){var p=new URL(location.href).searchParams,r=p.get("ref");
+    if(!r&&!p.get("utm_campaign"))return;
+    window.goatcounter={no_onload:true};
+    function clean(){var u=new URL(location.href);["ref","utm_campaign","utm_source","utm_medium"].forEach(function(k){u.searchParams.delete(k)});
+      history.replaceState(null,"",u.pathname+u.search+u.hash)}
+    window.mhCount=function(){try{window.goatcounter.count(r?{referrer:r}:{})}finally{clean()}};
+    setTimeout(clean,4000);  /* if the counter is blocked, still tidy the address */
+  })();</script>
+  <script data-goatcounter="https://merithumanist.goatcounter.com/count" async src="https://gc.zgo.at/count.js" onload="window.mhCount&&mhCount()"></script>
   <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>
