@@ -243,3 +243,8 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 .jump { color: var(--muted); font-size: 0.9rem; line-height: 2; margin: 0 0 1rem; }
 .jump a { display: inline-block; padding: 0.2rem 0.15rem; }
 .archive h2, h2.phase { scroll-margin-top: 1rem; }
+
+.date.top { margin: 2rem 0 0; }
+.date.top + h1 { margin-top: 0.3rem; }
+.kicker + .date.top { margin-top: 0.2rem; }
+.door .thumb { position: relative; }
