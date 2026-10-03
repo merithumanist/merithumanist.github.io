@@ -131,10 +131,10 @@ h2.phase {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-ol.archive { list-style: none; padding: 0; margin: 0; }
-ol.archive li { border-bottom: 1px solid var(--rule); }
-ol.archive li a { display: block; padding: 0.6rem 0; text-decoration: none; }
-ol.archive li.special a { font-style: italic; }
+.archive { list-style: none; padding: 0; margin: 0; }
+.archive li { border-bottom: 1px solid var(--rule); }
+.archive li a { display: block; padding: 0.6rem 0; text-decoration: none; }
+.archive li.special a { font-style: italic; }
 
 footer.site {
   margin-top: 3rem;
@@ -227,11 +227,19 @@ header.site .nav a { color: var(--muted); }
 .series .part-head + .part { margin-top: 0.75rem; }
 
 /* All Logs: a Special Log sits in sequence, with the same gap as between blocks */
-ol.archive.special-block { margin-top: 2.25rem; }
-ol.archive.special-block + ol.archive { margin-top: 2.25rem; }
+.archive.special-block { margin-top: 2.25rem; }
+.archive.special-block + .archive { margin-top: 2.25rem; }
 
 /* Comfortable tap targets on phones (at least 24px tall, spaced apart) */
 header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 .alt summary { min-height: 1.75rem; min-width: 2.5rem; padding: 0.45rem 0.55rem; text-align: center; }
 .tags a { display: inline-block; padding: 0.25rem 0; }
 .door .kicker a, .kicker a { display: inline-block; padding: 0.2rem 0; }
+
+/* Skip link: hidden until focused with the keyboard */
+.skip { position: absolute; left: -9999px; top: 0.5rem; background: var(--cream); color: var(--ink); padding: 0.5rem 0.9rem; border-radius: 4px; z-index: 10; }
+.skip:focus { left: 0.5rem; }
+/* All Logs jump links */
+.jump { color: var(--muted); font-size: 0.9rem; line-height: 2; margin: 0 0 1rem; }
+.jump a { display: inline-block; padding: 0.2rem 0.15rem; }
+.archive h2, h2.phase { scroll-margin-top: 1rem; }
