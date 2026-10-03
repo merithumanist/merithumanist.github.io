@@ -251,3 +251,4 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 
 .source-quote { margin: 1rem 0 0.4rem; padding: 0.2rem 0 0.2rem 1rem; border-left: 3px solid var(--muted); color: var(--muted); font-style: italic; }
 .source-quote p { margin: 0.5rem 0; }
+.source-quote footer { margin-top: 1rem; font-style: normal; font-size: 0.9rem; }
