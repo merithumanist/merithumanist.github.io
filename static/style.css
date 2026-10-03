@@ -248,3 +248,6 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 .date.top + h1 { margin-top: 0.3rem; }
 .kicker + .date.top { margin-top: 0.2rem; }
 .door .thumb { position: relative; }
+
+.source-quote { margin: 1rem 0 0.4rem; padding: 0.2rem 0 0.2rem 1rem; border-left: 3px solid var(--muted); color: var(--muted); font-style: italic; }
+.source-quote p { margin: 0.5rem 0; }
