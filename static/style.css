@@ -283,17 +283,26 @@ header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 .more-replies .twitter-tweet-later { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
 .log blockquote.twitter-tweet { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
 
-/* Header, centred: the name, then Logs · Explore · Discourse */
-header.site { flex-direction: column; justify-content: center; gap: 0.35rem; text-align: center; }
+/* Header: the name on the left, a little larger; Logs · Explore · Discourse centred under it */
+header.site { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+header.site .brand { align-self: flex-start; font-size: 1.15rem; gap: 0.7rem; }
+header.site .brand img { width: 2.4rem; height: 2.4rem; }
 header.site .nav { justify-content: center; gap: 0; }
 header.site .nav a + a::before { content: "·"; color: var(--muted); padding: 0 0.6rem; display: inline-block; text-decoration: none; }
 
-/* Footer, centred */
-footer.site { text-align: center; }
+/* Footer: icons centred, small print left */
 .social { justify-content: center; }
 
-/* Home: three big section buttons, a title and a line under it */
-.cta .button { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; flex: 1 1 0; min-width: 11rem; padding: 0.9rem 1rem; text-align: center; }
+/* Home: three section buttons in a row, a title and a line under each */
+.cta { flex-wrap: nowrap; gap: 0.6rem; }
+.cta .button { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 0.15rem;
+               flex: 1 1 0; min-width: 0; padding: 0.9rem 0.75rem; text-align: center; }
 .cta .button b { font-weight: normal; font-size: 1.1rem; }
-.cta .button span { font-size: 0.8rem; opacity: 0.75; }
-@media (max-width: 600px) { .cta { flex-direction: column; gap: 0.6rem; } .cta .button { min-width: 0; padding: 0.65rem 1rem; } }
+.cta .button span { font-size: 0.8rem; opacity: 0.75; line-height: 1.3; }
+@media (max-width: 600px) {
+  .cta { gap: 0.4rem; }
+  .cta .button { padding: 0.6rem 0.35rem; }
+  .cta .button b { font-size: 0.95rem; }
+  .cta .button span { font-size: 0.68rem; }
+}
+@media (max-width: 360px) { header.site .brand { font-size: 1rem; } header.site .brand img { width: 2.1rem; height: 2.1rem; } }
