@@ -264,10 +264,8 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 /* Three nav links: on narrow phones the nav drops under the name rather than crowding it */
 header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 /* Discourse pages laid out like a Log: the lead post as the text, the other post in the quote box */
-.exchange .lead-meta .post-links, .exchange .source-quote .post-links { display: block; }
+.exchange .lead-meta span { display: block; }
 .exchange .lead-meta .post-links a { color: var(--cream); }
-.exchange .source-quote.own { border-left-color: var(--cream); }
-.exchange .source-quote .gallery { font-style: normal; }
 .account { color: var(--muted); margin: -0.5rem 0 1rem; }
 /* Someone else's X post, as X's own card; until X's script draws it, a plain link */
 .exchange blockquote.twitter-tweet { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
