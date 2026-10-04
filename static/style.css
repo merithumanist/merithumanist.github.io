@@ -297,3 +297,8 @@ header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 .exchange .source-quote .gallery { font-style: normal; }
 .exchange .thread .kicker { margin: 1.5rem 0 0.25rem; }
 .account { color: var(--muted); margin: -0.5rem 0 1rem; }
+/* An X post shown as X's own card; until X's script runs (or if it can't) it reads as a quote */
+.exchange blockquote.twitter-tweet { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
+.exchange blockquote.twitter-tweet p { margin: 0 0 0.75rem; }
+.exchange .twitter-tweet-rendered { margin: 1rem auto !important; }
+.follow { margin: 0.5rem 0 1.5rem; font-size: 0.95rem; }
