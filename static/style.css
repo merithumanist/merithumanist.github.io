@@ -252,3 +252,26 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 .source-quote { margin: 1rem 0 0.4rem; padding: 0.2rem 0 0.2rem 1rem; border-left: 3px solid var(--muted); color: var(--muted); font-style: italic; }
 .source-quote p { margin: 0.5rem 0; }
 .source-quote footer { margin-top: 1rem; font-style: normal; font-size: 0.9rem; }
+
+/* What a Log answers, and its link to a Discourse exchange */
+.responding { margin: 1.75rem 0 0.5rem; }
+.responding .source-quote { margin-top: 0.5rem; }
+.discourse-callout { margin-top: 1.5rem; padding: 0.75rem 1rem; border-left: 3px solid var(--cream); background: var(--panel); font-size: 0.95rem; }
+.discourse-callout span { color: var(--muted); }
+
+/* Discourse: a public exchange kept in full; replies nest under what they answer */
+.thread { margin: 1.5rem 0; }
+.thread .post { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
+.thread .post.own { border-left-color: var(--cream); }
+.thread .post p { margin: 0 0 0.6rem; }
+.thread .post footer { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+.thread .post footer a { color: var(--muted); }
+.thread .post footer strong { color: var(--text); font-weight: normal; }
+.thread .post-links { display: block; margin-top: 0.15rem; }
+.thread .post-links a { color: var(--cream); }
+.thread .replies { margin-left: 1.25rem; padding-left: 0.75rem; border-left: 1px dashed var(--rule); }
+@media (max-width: 600px) {
+  .thread .replies { margin-left: 0.4rem; padding-left: 0.5rem; }
+}
+/* Three nav links: on narrow phones the nav drops under the name rather than crowding it */
+header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
