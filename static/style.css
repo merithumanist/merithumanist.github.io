@@ -282,3 +282,18 @@ header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 .more-replies[open] summary { border-bottom: 1px solid var(--rule); margin-bottom: 0.5rem; }
 .more-replies .twitter-tweet-later { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
 .log blockquote.twitter-tweet { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
+
+/* Header, centred: the name, then Logs · Explore · Discourse */
+header.site { flex-direction: column; justify-content: center; gap: 0.35rem; text-align: center; }
+header.site .nav { justify-content: center; gap: 0; }
+header.site .nav a + a::before { content: "·"; color: var(--muted); padding: 0 0.6rem; display: inline-block; text-decoration: none; }
+
+/* Footer, centred */
+footer.site { text-align: center; }
+.social { justify-content: center; }
+
+/* Home: three big section buttons, a title and a line under it */
+.cta .button { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; flex: 1 1 0; min-width: 11rem; padding: 0.9rem 1rem; text-align: center; }
+.cta .button b { font-weight: normal; font-size: 1.1rem; }
+.cta .button span { font-size: 0.8rem; opacity: 0.75; }
+@media (max-width: 600px) { .cta { flex-direction: column; gap: 0.6rem; } .cta .button { min-width: 0; padding: 0.65rem 1rem; } }
