@@ -287,3 +287,6 @@ header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 .thread .st-body { padding: 0 0.75rem; }
 .thread .st-body .post { margin: 0.75rem 0; }
 .thread .subthread .replies { margin-left: 0.5rem; padding-left: 0.5rem; }
+.thread .post .gallery { margin: 0.75rem 0; }
+.thread .post .gallery.single img { max-height: 18rem; }
+.thread .post-note { color: var(--muted); font-size: 0.85rem; font-style: italic; }
