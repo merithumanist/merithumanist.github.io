@@ -256,8 +256,8 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 /* What a Log answers, and its link to a Discourse exchange */
 .responding { margin: 1.75rem 0 0.5rem; }
 .responding .source-quote { margin-top: 0.5rem; }
-.discourse-callout { margin-top: 1.5rem; padding: 0.75rem 1rem; border-left: 3px solid var(--cream); background: var(--panel); font-size: 0.95rem; }
-.discourse-callout span { color: var(--muted); }
+.discourse-callout + .discuss { margin-top: 0.75rem; }
+.nowrap { white-space: nowrap; }
 
 /* Discourse: our posts written out; .post-note for a line about media not kept */
 .post-note { color: var(--muted); font-size: 0.85rem; font-style: italic; }
