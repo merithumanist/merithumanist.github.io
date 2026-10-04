@@ -143,7 +143,10 @@ footer.site {
   border-top: 1px solid var(--rule);
   font-size: 0.85rem;
 }
-.social { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+.social { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-items: center; }
+.social a { color: var(--muted); line-height: 0; }
+.social a:hover, .social a:focus-visible { color: var(--cream); }
+.social svg { display: block; width: 22px; height: 22px; }
 .fine { color: var(--muted); font-size: 0.75rem; }
 
 /* brand images */
@@ -231,7 +234,8 @@ header.site .nav a { color: var(--muted); }
 .archive.special-block + .archive { margin-top: 2.25rem; }
 
 /* Comfortable tap targets on phones (at least 24px tall, spaced apart) */
-header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
+header.site .nav a { display: inline-block; padding: 0.35rem 0; }
+.social a { display: inline-block; padding: 0.5rem 0.15rem; }
 .alt summary { min-height: 1.75rem; min-width: 2.5rem; padding: 0.45rem 0.55rem; text-align: center; }
 .tags a { display: inline-block; padding: 0.25rem 0; }
 .door .kicker a, .kicker a { display: inline-block; padding: 0.2rem 0; }
