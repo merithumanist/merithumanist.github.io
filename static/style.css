@@ -306,3 +306,10 @@ header.site .nav a + a::before { content: "·"; color: var(--muted); padding: 0 
   .cta .button span { font-size: 0.65rem; }
 }
 @media (max-width: 360px) { header.site .brand { font-size: 1rem; } header.site .brand img { width: 2.1rem; height: 2.1rem; } }
+
+/* A Log's highlight banner (e.g. "Most reactions") */
+.highlight { display: inline-block; margin: 2rem 0 0; padding: 0.3rem 0.8rem; background: var(--cream); color: var(--ink);
+             border-radius: 999px; font-size: 0.8rem; letter-spacing: 0.04em; }
+.highlight + .kicker, .highlight + .date.top { margin-top: 0.6rem; }
+/* A Threads card, until Threads' script draws it */
+blockquote.text-post-media { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
