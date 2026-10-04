@@ -296,3 +296,4 @@ header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 .exchange .source-quote.own { border-left-color: var(--cream); }
 .exchange .source-quote .gallery { font-style: normal; }
 .exchange .thread .kicker { margin: 1.5rem 0 0.25rem; }
+.account { color: var(--muted); margin: -0.5rem 0 1rem; }
