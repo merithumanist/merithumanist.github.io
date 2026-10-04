@@ -275,3 +275,15 @@ header.site .nav a, .social a { display: inline-block; padding: 0.35rem 0; }
 }
 /* Three nav links: on narrow phones the nav drops under the name rather than crowding it */
 header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
+/* Sub-threads: folded until opened, each set apart as its own conversation */
+.thread .subthread { margin: 0.75rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+.thread .subthread summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.6rem; padding: 0.6rem 0.9rem; font-size: 0.9rem; }
+.thread .subthread summary::-webkit-details-marker { display: none; }
+.thread .subthread summary::before { content: "▸"; color: var(--cream); width: 0.8rem; }
+.thread .subthread[open] summary::before { content: "▾"; }
+.thread .subthread[open] summary { border-bottom: 1px solid var(--rule); }
+.thread .st-which { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.thread .st-who { color: var(--text); }
+.thread .st-body { padding: 0 0.75rem; }
+.thread .st-body .post { margin: 0.75rem 0; }
+.thread .subthread .replies { margin-left: 0.5rem; padding-left: 0.5rem; }
