@@ -314,3 +314,4 @@ header.site .nav a + a::before { content: "·"; color: var(--muted); padding: 0 
 .exchange .highlight + .kicker { margin-top: 0.6rem; }
 /* A Threads card, until Threads' script draws it */
 blockquote.text-post-media { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
+.exchange .lead-meta .stats { color: var(--text); }
