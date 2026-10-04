@@ -272,3 +272,9 @@ header.site { flex-wrap: wrap; gap: 0.25rem 1rem; }
 .exchange blockquote.twitter-tweet p { margin: 0 0 0.75rem; }
 .exchange .twitter-tweet-rendered { margin: 1rem auto !important; }
 .follow { margin: 0.5rem 0 1.5rem; font-size: 0.95rem; }
+/* A long back-and-forth, folded until opened */
+.more-replies { margin: 1.25rem 0; border: 1px solid var(--rule); border-radius: 6px; padding: 0 1rem; }
+.more-replies summary { cursor: pointer; padding: 0.75rem 0; color: var(--cream); }
+.more-replies[open] summary { border-bottom: 1px solid var(--rule); margin-bottom: 0.5rem; }
+.more-replies .twitter-tweet-later { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
+.log blockquote.twitter-tweet { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
