@@ -311,3 +311,6 @@ blockquote.text-post-media { margin: 1rem 0; padding: 0.8rem 1rem; background: v
 .discourse-callout p { margin: 0 0 0.35rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .discourse-callout ul { list-style: none; margin: 0; padding: 0; }
 .discourse-callout li + li { margin-top: 0.4rem; }
+/* Keyboard focus: a clear ring on links and buttons (only when using a keyboard) */
+a:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; border-radius: 3px; }
+.button:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
