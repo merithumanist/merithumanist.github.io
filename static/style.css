@@ -315,3 +315,6 @@ header.site .nav a + a::before { content: "·"; color: var(--muted); padding: 0 
 /* A Threads card, until Threads' script draws it */
 blockquote.text-post-media { margin: 1rem 0; padding: 0.8rem 1rem; background: var(--panel); border-left: 3px solid var(--muted); border-radius: 0 6px 6px 0; }
 .exchange .lead-meta .stats { color: var(--text); }
+.discourse-callout p { margin: 0 0 0.35rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.discourse-callout ul { list-style: none; margin: 0; padding: 0; }
+.discourse-callout li + li { margin-top: 0.4rem; }
