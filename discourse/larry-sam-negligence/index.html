@@ -59,6 +59,6 @@ That shifts the dynamic from a "test" to institutional negligence.</p></div><p c
     setTimeout(clean,4000);  /* if the counter is blocked, still tidy the address */
   })();</script>
   <script data-goatcounter="https://merithumanist.goatcounter.com/count" async src="https://gc.zgo.at/count.js" onload="window.mhCount&&mhCount()"></script>
-  <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
+  <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(function(){});  /* some browsers and crawlers refuse; that's fine */</script>
 </body>
 </html>
