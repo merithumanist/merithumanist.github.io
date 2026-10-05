@@ -6,7 +6,7 @@ Humanism. Merit. Consequence. A continuing log on earned excellence.
 
 This repository holds the published website: short essays ("Logs") on standards,
 consequence and aspiration in Star Trek, Stargate and the wider screen culture, plus
-Discourse, a record of public conversations on X.
+Discourse, a record of public conversations on Social Media.
 
 ## About this repository
 
