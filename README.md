@@ -1,3 +1,5 @@
+<p align="center"><img src="static/icon.png" alt="The Meritocratic Humanist emblem: a sextant" width="140"></p>
+
 # The Meritocratic Humanist
 
 **https://merithumanist.github.io**
@@ -30,3 +32,7 @@ Share it, quote it, use it; just credit The Meritocratic Humanist and link back.
 Images in the Logs belong to their respective owners and are used for commentary.
 Posts by other people in Discourse are shown through each platform's own embeds and
 remain theirs.
+
+---
+
+<sub>Site built with [Claude](https://claude.com/claude-code) by Anthropic. The writing is the author's own.</sub>
