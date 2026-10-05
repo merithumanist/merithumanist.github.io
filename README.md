@@ -35,4 +35,4 @@ remain theirs.
 
 ---
 
-<sub>Built with [Claude](https://claude.com/claude-code). The writing is the author's own.</sub>
+<sub>Site built with [Claude](https://claude.com/claude-code) by Anthropic. The writing is the author's own.</sub>
