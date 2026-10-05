@@ -106,7 +106,6 @@ h2 { font-size: 1.35rem; }
 .tagline { color: var(--muted); margin: 0; }
 
 .latest h2 a { text-decoration: none; }
-.cta { text-align: center; margin: 2rem 0; }
 .button {
   display: inline-block;
   padding: 0.7rem 1.6rem;
@@ -209,7 +208,6 @@ header.site .nav { display: flex; gap: 1rem; }
 header.site .nav a { color: var(--muted); }
 .tags { color: var(--muted); font-size: 0.85rem; margin: 0.25rem 0; }
 .tags span { letter-spacing: 0.04em; }
-.cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
 
 /* ALT badge: tap to read the image description */
 .alt { position: absolute; left: 0.4rem; right: 0.4rem; bottom: 0.4rem; }
@@ -293,18 +291,13 @@ header.site .nav a + a::before { content: "·"; color: var(--muted); padding: 0 
 /* Footer: icons centred, small print left */
 .social { justify-content: center; }
 
-/* Home: three section buttons in a row, a title and a line under each */
-.cta { flex-wrap: nowrap; gap: 0.6rem; }
-.cta .button { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 0.15rem;
-               flex: 1 1 0; min-width: 0; padding: 0.9rem 0.75rem; text-align: center; }
-.cta .button b { font-weight: normal; font-size: 1.1rem; }
-.cta .button span { font-size: 0.75rem; font-style: italic; opacity: 0.7; line-height: 1.3; }
-@media (max-width: 600px) {
-  .cta { gap: 0.4rem; }
-  .cta .button { padding: 0.6rem 0.35rem; }
-  .cta .button b { font-size: 0.95rem; }
-  .cta .button span { font-size: 0.65rem; }
-}
+/* Home: The Full Archive, three buttons with a word under each */
+.hub { margin: 2rem 0; }
+.hub-label { margin: 0 0 0.6rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; }
+.hub-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+.hub-col { display: flex; flex-direction: column; align-items: stretch; gap: 0.45rem; min-width: 0; }
+.hub-col .button { display: block; text-align: center; padding: 0.75rem 0.3rem; font-size: 1.05rem; }
+.hub-col span { color: var(--muted); font-size: 0.75rem; font-style: italic; text-align: center; }
 @media (max-width: 360px) { header.site .brand { font-size: 1rem; } header.site .brand img { width: 2.1rem; height: 2.1rem; } }
 
 /* A Log's highlight banner (e.g. "Most reactions") */
