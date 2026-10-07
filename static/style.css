@@ -327,3 +327,6 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
   font-size: 0.85rem; opacity: 0.82; line-height: 1.6; }
 .discourse-notice p { margin: 0 0 0.5rem; }
 .discourse-notice p:last-child { margin: 0; }
+
+/* Only in a browser GoatCounter skips (the owner's): a small reminder in the footer */
+.not-counted { color: #7fbf7f; }
