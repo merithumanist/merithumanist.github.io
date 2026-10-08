@@ -177,6 +177,21 @@ header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
   box-shadow: 0 0 0 3px rgba(242,232,213,.25);
 }
 
+/* The emblem sits in .banner. Large screens: the starfield fills the whole hero, as before.
+   Phones: the starfield shrinks to a short banner behind the emblem, like a social profile, so the
+   archive and the latest Log come up the screen. */
+@media (min-width: 601px) { .hero .banner { background-image: none !important; } }
+@media (max-width: 600px) {
+  .hero.has-bg { background-image: none !important; padding: 0 0 0.5rem; margin-top: 0.75rem; overflow: visible; }
+  .hero.has-bg::before { display: none; }
+  .hero .banner { position: relative; height: 6.5rem; border-radius: 8px; overflow: hidden;
+    background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+  .hero .banner::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(14,15,19,.15), rgba(14,15,19,.45)); }
+  .hero .banner .avatar { position: relative; width: 5.25rem; height: 5.25rem; margin: 0; }
+  .hero h1 { font-size: 1.7rem; margin: 1rem 0 0.4rem; }
+  .hero.has-bg .tagline { color: var(--muted); font-size: 0.95rem; }
+}
+
 .phase-sub { margin: -0.25rem 0 0.5rem; color: var(--muted); font-style: italic; font-size: 0.95rem; }
 
 .video { position: relative; aspect-ratio: 16 / 9; margin: 1rem 0 1.5rem; }
