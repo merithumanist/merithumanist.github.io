@@ -115,8 +115,9 @@ h2 { font-size: 1.35rem; }
   text-decoration: none;
 }
 
+.latest { padding-bottom: 2.25rem; border-bottom: 1px solid var(--rule); }  /* the latest Log ends here; The Door stands apart */
 .door {
-  margin: 2rem 0 3rem;
+  margin: 2.5rem 0 3rem;
   padding: 1rem 1.25rem;
   background: var(--panel);
   border-radius: 6px;
