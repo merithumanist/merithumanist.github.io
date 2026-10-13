@@ -98,6 +98,7 @@ h2 { font-size: 1.35rem; }
   border-top: 1px solid var(--rule);
   font-size: 0.9rem;
 }
+.prevnext > * { flex: 1 1 0; min-width: 0; }  /* each side half the width, however long its title */
 .prevnext .next { text-align: right; }
 .back { margin: 1.5rem 0 3rem; font-size: 0.9rem; }
 
