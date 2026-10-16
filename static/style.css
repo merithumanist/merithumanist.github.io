@@ -105,6 +105,7 @@ h2 { font-size: 1.35rem; }
 .hero { padding: 2.5rem 0 1rem; text-align: center; }
 .hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
 .tagline { color: var(--muted); margin: 0; }
+.tagline .tag-gap { display: block; height: 0.6em; }
 
 .latest h2 a { text-decoration: none; }
 .button {
