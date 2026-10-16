@@ -4,7 +4,9 @@
 
 **https://merithumanist.github.io**
 
-Humanism. Merit. Consequence. A continuing log on earned excellence.
+Humanism. Merit. Consequence.  
+Star Trek, Stargate...  
+How we treat each other says more than we know, on screen and off.
 
 This repository holds the published website: short essays ("Logs") on standards,
 consequence and aspiration in Star Trek, Stargate and the wider screen culture, plus
