@@ -106,6 +106,7 @@ h2 { font-size: 1.35rem; }
 .hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
 .tagline { color: var(--muted); margin: 0; }
 .tagline .tag-gap { display: block; height: 0.6em; }
+.tagline .tl { display: block; white-space: nowrap; }
 
 .latest h2 a { text-decoration: none; }
 .button {
@@ -191,7 +192,8 @@ header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
   .hero .banner::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(14,15,19,.15), rgba(14,15,19,.45)); }
   .hero .banner .avatar { position: relative; width: 5.25rem; height: 5.25rem; margin: 0; }
   .hero h1 { font-size: 1.7rem; margin: 1rem 0 0.4rem; }
-  .hero.has-bg .tagline { color: var(--muted); font-size: 0.95rem; }
+  /* all lines shrink together (equal weight) so the longest tagline line fits the screen */
+  .hero.has-bg .tagline { color: var(--muted); font-size: min(0.95rem, calc((100vw - 2.25rem) / 23)); }
 }
 
 .phase-sub { margin: -0.25rem 0 0.5rem; color: var(--muted); font-style: italic; font-size: 0.95rem; }
