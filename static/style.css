@@ -193,7 +193,7 @@ header.site .brand img { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
   .hero .banner .avatar { position: relative; width: 5.25rem; height: 5.25rem; margin: 0; }
   .hero h1 { font-size: 1.7rem; margin: 1rem 0 0.4rem; }
   /* all lines shrink together (equal weight) so the longest tagline line fits the screen */
-  .hero.has-bg .tagline { color: var(--muted); font-size: min(0.95rem, calc((100vw - 2.25rem) / 23)); }
+  .hero.has-bg .tagline { color: var(--muted); font-size: min(0.95rem, calc((100vw - 2.25rem) / 25)); }
 }
 
 .phase-sub { margin: -0.25rem 0 0.5rem; color: var(--muted); font-style: italic; font-size: 0.95rem; }
