@@ -377,3 +377,12 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 .suggest .fine { color: var(--muted); font-size: 0.85rem; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .gotcha { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+/* Today's Thought archive */
+.thought-months, .thought-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+.thought-months li, .thought-list li { margin: 0 0 1rem; }
+.thought-months .count { color: var(--muted); font-size: 0.85rem; margin-left: 0.4rem; }
+.thought-list a { display: block; text-decoration: none; }
+.thought-list .when { display: block; color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.thought-list .first { text-decoration: underline; text-underline-offset: 0.2em; }
+.thought-reply { margin: 2rem 0 1.5rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
