@@ -386,3 +386,5 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 .thought-list .when { display: block; color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .thought-list .first { text-decoration: underline; text-underline-offset: 0.2em; }
 .thought-reply { margin: 2rem 0 1.5rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
+
+.thought .responding { margin-bottom: 1.5em; }
