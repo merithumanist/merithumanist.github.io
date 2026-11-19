@@ -390,8 +390,8 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 .thought .responding { margin-bottom: 1.5em; }
 
 /* someone else's post, drawn by its platform (quoted, context, Thought quote posts) */
-.post-card, .thought-quotes { margin: 1rem 0; }
-.post-card .twitter-tweet, .thought-quotes .twitter-tweet { margin-left: auto !important; margin-right: auto !important; }
+.post-card { margin: 1rem 0; }
+.post-card .twitter-tweet { margin-left: auto !important; margin-right: auto !important; }
 .responding.context .kicker { margin-bottom: 0.25rem; }
 
 /* Meta's cards (Facebook, Instagram): their insides can't be styled from here, so frame them to sit
@@ -400,7 +400,6 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
   border: 1px solid var(--rule); background: #fff; }
 .fb-card .fb-post, .fb-card .fb-post > span, .fb-card .fb-post iframe { width: 100% !important; display: block; }
 .fb-card blockquote { margin: 0; padding: 16px; text-align: center; }
-.fb-card iframe { display: block; width: 100%; border-radius: 0 !important; }
 .ig-card .instagram-media, .ig-card iframe.instagram-media-rendered { margin: 0 !important; border-radius: 0 !important;
   box-shadow: none !important; max-width: 100% !important; min-width: 0 !important; width: 100% !important; }
 .ig-card p { line-height: 1.5; }
