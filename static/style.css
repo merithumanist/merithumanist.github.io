@@ -388,3 +388,8 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 .thought-reply { margin: 2rem 0 1.5rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
 
 .thought .responding { margin-bottom: 1.5em; }
+
+/* someone else's post, drawn by its platform (quoted, context, Thought quote posts) */
+.post-card, .thought-quotes { margin: 1rem 0; }
+.post-card .twitter-tweet, .thought-quotes .twitter-tweet { margin-left: auto !important; margin-right: auto !important; }
+.responding.context .kicker { margin-bottom: 0.25rem; }
