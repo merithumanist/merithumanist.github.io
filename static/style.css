@@ -357,6 +357,7 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 .gloss:focus-visible { outline: 2px solid var(--muted); outline-offset: 2px; }
 .gloss-pop { max-width: min(32rem, calc(100vw - 2rem)); margin: auto; padding: 0.5rem 1.25rem;
   border: 1px solid var(--muted); border-radius: 8px; background: var(--bg, Canvas); color: inherit; }
+.gloss-cite { margin: 0.75rem 0; }
 .gloss-pop::backdrop { background: rgb(0 0 0 / 0.4); }
 
 /* Today's Thought: the suggestion form */
