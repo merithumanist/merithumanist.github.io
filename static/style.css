@@ -393,3 +393,12 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 .post-card, .thought-quotes { margin: 1rem 0; }
 .post-card .twitter-tweet, .thought-quotes .twitter-tweet { margin-left: auto !important; margin-right: auto !important; }
 .responding.context .kicker { margin-bottom: 0.25rem; }
+
+/* Meta's cards (Facebook, Instagram): their insides can't be styled from here, so frame them to sit
+   with the page: centred, rounded, a quiet border, and no white sliver at the edges */
+.fb-card, .ig-card { max-width: 500px; margin: 1.25rem auto; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--rule); background: #fff; line-height: 0; }
+.fb-card iframe { display: block; width: 100%; border-radius: 0 !important; }
+.ig-card .instagram-media, .ig-card iframe.instagram-media-rendered { margin: 0 !important; border-radius: 0 !important;
+  box-shadow: none !important; max-width: 100% !important; min-width: 0 !important; width: 100% !important; }
+.ig-card p { line-height: 1.5; }
