@@ -397,7 +397,9 @@ h2.hub-label { font-weight: normal; line-height: 1.65; }
 /* Meta's cards (Facebook, Instagram): their insides can't be styled from here, so frame them to sit
    with the page: centred, rounded, a quiet border, and no white sliver at the edges */
 .fb-card, .ig-card { max-width: 500px; margin: 1.25rem auto; border-radius: 12px; overflow: hidden;
-  border: 1px solid var(--rule); background: #fff; line-height: 0; }
+  border: 1px solid var(--rule); background: #fff; }
+.fb-card .fb-post, .fb-card .fb-post > span, .fb-card .fb-post iframe { width: 100% !important; display: block; }
+.fb-card blockquote { margin: 0; padding: 16px; text-align: center; }
 .fb-card iframe { display: block; width: 100%; border-radius: 0 !important; }
 .ig-card .instagram-media, .ig-card iframe.instagram-media-rendered { margin: 0 !important; border-radius: 0 !important;
   box-shadow: none !important; max-width: 100% !important; min-width: 0 !important; width: 100% !important; }
